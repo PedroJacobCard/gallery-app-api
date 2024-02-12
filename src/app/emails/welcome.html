@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+</head>
+
+<body>
+  <header style="
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #84ab7a3d;
+  ">
+      <a href="https://ibb.co/B4dmjjS"><img src="https://i.ibb.co/M8Wbpp3/Frame-8.png" alt="Frame-8" border="0" /></a>
+
+    <div style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans;">
+      <h1>Hello, {{name}}! Here is Pedro from My Gallery 😜. <br/> Welcome to our App!</h1>
+      <p style="font-size: larger;">You've successefully created an account <br/>
+        and can now start exploring the world of art!</p>
+    </div>
+  </header>
+  <main
+    style="padding: 0 2rem; display:flex; flex-direction: column; justify-content:center; align-items:center; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans; margin-top: 2rem;">
+    <h1 style="margin: 0 auto; font-weight: 500;">Here is your account details:</h1>
+    <div style="display: flex; flex-direction: column;">
+      <h2>Name: {{name}}</h2>
+      <h2>Email: {{email}}</h2>
+      <h2>Created at: {{createdAt}}</h2>
+    </div>
+  </main>
+</body>
+</html>
