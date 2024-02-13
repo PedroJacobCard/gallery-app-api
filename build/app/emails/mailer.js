@@ -1,10 +1,4 @@
 "use strict";
-
-const { configDotenv } = require("dotenv");
-
-configDotenv({
-  path: ['../../../.env', '.env'],
-})
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -40,6 +34,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sendFotoCreatedEmail = exports.sendWelcomeEmail = void 0;
 const nodemailer = __importStar(require("nodemailer"));
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.configDotenv)({
+    path: ["../../../.env", '.env']
+});
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
