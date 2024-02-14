@@ -1,3 +1,3 @@
-const allowsOrigin = ['https://mygallery-m4nd.onrender.com', 'http://localhost:5173'];
+const allowsOrigin = ['https://mygallery-m4nd.onrender.com'];
 
 export default allowsOrigin;

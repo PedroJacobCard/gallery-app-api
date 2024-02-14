@@ -49,7 +49,11 @@ const mailer_1 = require("../emails/mailer");
 class FotosController {
     index(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const fotos = yield prismaClient_1.prisma.foto.findMany();
+            const fotos = yield prismaClient_1.prisma.foto.findMany({
+                where: {
+                    userId: req.params.userId,
+                }
+            });
             if (fotos.length <= 0)
                 return res.status(404).json('There is no photos to display.');
             return res.status(200).json(fotos);

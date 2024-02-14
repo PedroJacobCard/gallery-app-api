@@ -5,7 +5,11 @@ import { sendFotoCreatedEmail } from '../emails/mailer';
 
 class FotosController {
   async index(req: Request, res: Response): Promise<Response> {
-    const fotos = await prisma.foto.findMany();
+    const fotos = await prisma.foto.findMany({
+      where: {
+        userId: req.params.userId,
+      }
+    });
 
     if (fotos.length <= 0) return res.status(404).json('There is no photos to display.');
 
